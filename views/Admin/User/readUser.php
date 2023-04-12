@@ -15,15 +15,9 @@
   <tr>
       <th scope="col">Id</th>
       <th scope="col">Nom</th>
-      <th scope="col">Prenom</th>
       <th scope="col">Email</th>
-      <th scope="col">Mdp</th>
-      <th scope="col">Téléphone</th>
-      <th scope="col">Cv</th>
-      <th scope="col">Zone</th>
-      <th scope="col">Adresse</th>
-      <th scope="col">Role</th>
-      <th scope="col">Admin</th>
+      <th scope="col">Expérience</th>
+      <th scope="col">Description</th>
       <th scope="col">Ajout</th>
       <th scope="col">Modifier</th>
       <th scope="col">Supprimer</th>
@@ -31,20 +25,14 @@
   </thead>
 <tbody>
       <tr>
-        <th style="background-color: whitesmoke; color: black" scope="row"><?= $User["id_user"];?></th>
-        <td style="background-color: whitesmoke; color: black"><?= $User["lastname"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["firstname"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["mail"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["password"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["phone"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["cv"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["area"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["address"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["role"];?></td>
-        <td style="background-color: whitesmoke; color: black"><?= $User["admin"];?></td>
+        <th style="background-color: whitesmoke; color: black" scope="row"><?= $user["id_user"];?></th>
+        <td style="background-color: whitesmoke; color: black"><?= $user["name"];?></td>
+        <td style="background-color: whitesmoke; color: black"><?= $user["mail"];?></td>
+        <td style="background-color: whitesmoke; color: black"><?= $user["exp"];?></td>
+        <td style="background-color: whitesmoke; color: black"><?= $user["description"];?></td>
         <td style="background-color: whitesmoke; color: black"><a href="../views/admin/formUser.php?user=create"><i class="fa-solid fa-plus"></i></a></td>
-        <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=formUpdate&id_user=<?=$User["id_user"]?>"><i class="fa-solid fa-pen"></a></i></a></td>
-        <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=delete&id_user=<?=$User["id_user"]?>"><i class="fa-solid fa-trash-can"></i></a></td>
+        <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=formUpdate&id_user=<?=$user["id_user"]?>"><i class="fa-solid fa-pen"></a></i></a></td>
+        <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=delete&id_user=<?=$user["id_user"]?>"><i class="fa-solid fa-trash-can"></i></a></td>
         </tr>
 
 

@@ -4,7 +4,7 @@ use \PDO;
 
 class DAO{
     private static $host="localhost";
-    private static $dbname="projet_potager";
+    private static $dbname="mi-figue-mi-raisin";
     private static $port="3306";
     private static $charset="UTF8";
 

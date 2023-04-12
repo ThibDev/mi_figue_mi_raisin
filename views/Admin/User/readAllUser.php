@@ -12,7 +12,7 @@
 
 <body>
 
-    <table style="width: 83.3%; height:20%;" class="table table-dark">
+    <table class="table table-dark">
         <thead>
             <tr>
                 <th scope="col">Id</th>
@@ -29,14 +29,14 @@
 
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <th style="background-color: whitesmoke; color: black" scope="row"><?= $User["id_user"]; ?></th>
-                    <td style="background-color: whitesmoke; color: black"><?= $User["lastname"]; ?></td>
-                    <td style="background-color: whitesmoke; color: black"><?= $User["mail"]; ?></td>
-                    <td style="background-color: whitesmoke; color: black"><?= $User["exp"]; ?></td>
-                    <td style="background-color: whitesmoke; color: black"><?= $User["description"]; ?></td>
-                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=read&id_user=<?= $User["id_user"] ?>">Voir Détails</a></td>
-                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=formUpdate&id_user=<?= $User["id_user"] ?>"><i class="fa-solid fa-pen"></a></i></a></td>
-                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=delete&id_user=<?= $User["id_user"] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
+                    <th style="background-color: whitesmoke; color: black" scope="row"><?= $user["id_user"]; ?></th>
+                    <td style="background-color: whitesmoke; color: black"><?= $user["name"]; ?></td>
+                    <td style="background-color: whitesmoke; color: black"><?= $user["mail"]; ?></td>
+                    <td style="background-color: whitesmoke; color: black"><?= $user["exp"]; ?></td>
+                    <td style="background-color: whitesmoke; color: black"><?= $user["description"]; ?></td>
+                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=read&id_user=<?= $user["id_user"] ?>">Voir Détails</a></td>
+                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=formUpdate&id_user=<?= $user["id_user"] ?>"><i class="fa-solid fa-pen"></a></i></a></td>
+                    <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=delete&id_user=<?= $user["id_user"] ?>"><i class="fa-solid fa-trash-can"></i></a></td>
                 </tr>
             <?php endforeach; ?>
 

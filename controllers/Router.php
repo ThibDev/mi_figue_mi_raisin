@@ -36,7 +36,7 @@ if (isset($_GET["product"])) {
     } else if ($_GET["product"] == "read") {
         ProductController::ReadById($_GET["id_product"]);
     } else if ($_GET["product"] == "update") {
-        ProductController::Update($_POST);
+        ProductController::Update($_POST, $_FILES);
     } elseif ($_GET["product"] == "formUpdate") {
         ProductController::formUpdate($_GET["id_product"]);
     } else if ($_GET["product"] == "delete") {

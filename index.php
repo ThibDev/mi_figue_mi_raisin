@@ -8,5 +8,6 @@
 </head>
 <body>
     <a href="./views/public/register.php?user=register">Inscription</a>
+    <a href="./views/public/login.php">Connexion</a>
 </body>
 </html>

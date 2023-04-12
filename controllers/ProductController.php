@@ -28,7 +28,7 @@ class ProductController{
 
     public static function formUpdate($id_product){
         $product = Product::findById($id_product);
-        require("../views/Admin/Product/formUpdate.php");
+        require("../views/Admin/Product/ProductFormUpdate.php");
     }
 
     public static function delete($id_product){

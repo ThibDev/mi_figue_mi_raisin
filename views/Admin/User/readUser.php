@@ -30,7 +30,7 @@
         <td style="background-color: whitesmoke; color: black"><?= $user["mail"];?></td>
         <td style="background-color: whitesmoke; color: black"><?= $user["exp"];?></td>
         <td style="background-color: whitesmoke; color: black"><?= $user["description"];?></td>
-        <td style="background-color: whitesmoke; color: black"><a href="../views/admin/formUser.php?user=create"><i class="fa-solid fa-plus"></i></a></td>
+        <td style="background-color: whitesmoke; color: black"><a href="../../public/register.php?user=create"><i class="fa-solid fa-plus"></i></a></td>
         <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=formUpdate&id_user=<?=$user["id_user"]?>"><i class="fa-solid fa-pen"></a></i></a></td>
         <td style="background-color: whitesmoke; color: black"><a href="../controllers/Router.php?user=delete&id_user=<?=$user["id_user"]?>"><i class="fa-solid fa-trash-can"></i></a></td>
         </tr>

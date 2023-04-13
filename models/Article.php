@@ -1,7 +1,9 @@
 <?php 
 namespace App\models;
 use App\models\DAO;
+use DateTime;
 use \PDOException;
+use App\models\User;
 
 require_once("../autoloader.php");
 
@@ -19,8 +21,8 @@ class Article{
         $this->title = strip_tags($_POST["title"]);
         $this->text = $text;
         $this->picture = $picture;
-        $this->id_user = $id_user;
-        $this->created_at = $created_at;
+        $this->id_user = User::findById($id_user);
+        $this->created_at = new DateTime('now');
     }
 
     // Getter et Setter
@@ -73,7 +75,9 @@ class Article{
             $stmt->bindValue(2, $this->text);
             $stmt->bindValue(3,$this->picture['picture']['name']);
             move_uploaded_file($this->picture['picture']['tmp_name'],"../static/image/".$this->picture['picture']['name']);
-            $stmt->bindValue(4, $this->id_user);
+            if ($_SESSION["user"] != null) {
+                $stmt->bindValue(4, $this->id_user);
+            }
             $stmt->bindValue(5, $this->created_at);
             $stmt->execute();
 

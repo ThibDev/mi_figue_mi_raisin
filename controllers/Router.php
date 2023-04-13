@@ -2,6 +2,7 @@
 
 use App\controllers\UserController;
 use App\controllers\ProductController;
+use App\controllers\ArticleController;
 
 require_once("../autoloader.php");
 
@@ -45,7 +46,23 @@ if (isset($_GET["product"])) {
         ProductController::readAll();
     }
 }
-
+if (isset($_GET["article"])) {
+    if ($_GET["article"] == "create") {
+        ArticleController::Create($_POST, $_FILES);
+    } else if ($_GET["article"] == "readAll") {
+        ArticleController::ReadAll();
+    } else if ($_GET["article"] == "read") {
+        ArticleController::ReadById($_GET["id_article"]);
+    } else if ($_GET["article"] == "update") {
+        ArticleController::Update($_POST, $_FILES);
+    } elseif ($_GET["article"] == "formUpdate") {
+        ArticleController::formUpdate($_GET["id_article"]);
+    } else if ($_GET["article"] == "delete") {
+        ArticleController::delete($_GET["id_article"]);
+    } else if ($_GET["article"] == "all") {
+        ArticleController::readAll();
+    }
+}
 
     
 

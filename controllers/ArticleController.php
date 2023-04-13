@@ -1,6 +1,7 @@
 <?php
 namespace App\controllers;
 use App\models\Article;
+use App\models\User;
 
 class ArticleController{
 

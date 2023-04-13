@@ -12,5 +12,7 @@
     <a href="../controllers/Router.php?user=readAll">Voir tous les utilisateurs</a>
     <a href="../views/Admin/Product/ProductForm.php">Ajouter un produit</a>
     <a href="../controllers/Router.php?product=readAll">Voir tous les produits</a>
+    <a href="../views/Admin/Article/ArticleForm.php">Ajouter un article</a>
+    <a href="../controllers/Router.php?article=readAll">Voir tous les articles</a>
 </body>
 </html>

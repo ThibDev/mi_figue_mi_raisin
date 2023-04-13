@@ -11,5 +11,6 @@
     <a href="../controllers/Router.php?user=logout">Déconnexion</a>
     <a href="../controllers/Router.php?user=readAll">Voir tous les utilisateurs</a>
     <a href="../views/Admin/Product/ProductForm.php">Ajouter un produit</a>
+    <a href="../controllers/Router.php?product=readAll">Voir tous les produits</a>
 </body>
 </html>

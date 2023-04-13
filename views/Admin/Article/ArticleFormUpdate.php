@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="../controllers/Router.php?user=update" method="post" style="width: 50%; margin: auto; padding-top: 100px;">
+    <form action="../controllers/Router.php?article=update" method="post" style="width: 50%; margin: auto; padding-top: 100px;">
         <input type="hidden" name="id_article" id="id_article" value="<?= $article["id_article"]; ?>">
 
         <div class="form-outline">

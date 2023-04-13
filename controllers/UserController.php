@@ -104,7 +104,8 @@ class UserController{
         }
         
         if(password_verify($post["password"], $user["password"]) == true){
-            session_start();
+            session_start(); 
+            $_SESSION["user"] = $user["id_user"];
             require("../views/public/profil.php");
         }
 

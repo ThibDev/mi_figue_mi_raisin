@@ -14,5 +14,6 @@
     <a href="../controllers/Router.php?product=readAll">Voir tous les produits</a>
     <a href="../views/Admin/Article/ArticleForm.php">Ajouter un article</a>
     <a href="../controllers/Router.php?article=readAll">Voir tous les articles</a>
+    <?= var_dump($_SESSION); ?>
 </body>
 </html>

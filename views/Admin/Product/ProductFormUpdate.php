@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="../controllers/Router.php?user=update" method="post" style="width: 50%; margin: auto; padding-top: 100px;">
+    <form action="../controllers/Router.php?product=update" method="post" style="width: 50%; margin: auto; padding-top: 100px;">
         <input type="hidden" name="id_product" id="id_product" value="<?= $product["id_product"]; ?>">
 
         <select name="category" class="form-select" aria-label="Disabled select example">

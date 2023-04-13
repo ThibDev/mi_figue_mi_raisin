@@ -12,18 +12,18 @@
 <body>
 
     <?php
-
+  session_start(); 
+    var_dump($_SESSION);
     if (isset($erreurs)) {
         var_dump($erreurs);
     }
-
     ?>
 
     <body style="background-color: #e5e6e8;">
 
-        <form enctype="multipart/form-data" action="../../../controllers/Router.php?product=create" method="post" style="width: 50%;background-color: white; margin: 50px auto;border-radius: 15px;padding: 10px;">
-            <h1 style="font-family: sans-serif; text-align:center; padding-bottom : 15px">Ajout d'article'</h1>
-
+        <form enctype="multipart/form-data" action="../../../controllers/Router.php?article=create" method="post" style="width: 50%;background-color: white; margin: 50px auto;border-radius: 15px;padding: 10px;">
+            <h1 style="font-family: sans-serif; text-align:center; padding-bottom : 15px">Ajout d'article</h1>
+            <input type="hidden" name="id_user" id="id_user" value="<?= $_SESSION["user"] ?>">
             <div class="form-outline">
                 <label class="form-label" for="form3Example1">Titre de l'article</label>
                 <input name="title" placeholder="Titre de l'article" type="text" id="form3Example1" class="form-control" />
@@ -37,6 +37,11 @@
             <div class="form-outline mb-4">
                 <label class="form-label" for="form4">Photo</label>
                 <input name="picture" type="file" required id="form4" class="form-control" /> 
+            </div>
+
+            <div class="form-outline mb-4">
+                <label class="form-label" for="form4">Date de publication</label>
+                <input name="created_at" type="datetime-local" required id="form4" class="form-control" /> 
             </div>
 
             <div class="form-check d-flex justify-content-center mb-4">

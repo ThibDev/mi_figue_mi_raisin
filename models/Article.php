@@ -3,7 +3,6 @@ namespace App\models;
 use App\models\DAO;
 use DateTime;
 use \PDOException;
-use App\models\User;
 
 require_once("../autoloader.php");
 
@@ -13,16 +12,17 @@ class Article{
     private $picture;
     private $id_user;
     private $created_at;
+    
 
     // Fonction construct
 
-    function __construct($titre, $text, $picture, $id_user, $created_at)
+    function __construct($title, $text, $picture, $created_at, $id_user)
     {
         $this->title = strip_tags($_POST["title"]);
         $this->text = $text;
         $this->picture = $picture;
-        $this->id_user = User::findById($id_user);
-        $this->created_at = new DateTime('now');
+        $this->id_user = $id_user;
+        $this->created_at = $created_at;
     }
 
     // Getter et Setter
@@ -70,15 +70,13 @@ class Article{
             $db = new DAO();
             $dbh = $db->getDbh();
 
-            $stmt = $dbh->prepare("INSERT INTO article (title, text, picture, id_user, created_at) VALUES (?, ?, ?, ?, ?)");
+            $stmt = $dbh->prepare("INSERT INTO article (title, text, picture, created_at, id_user) VALUES (?, ?, ?, ?, ?)");
             $stmt->bindValue(1, $this->title);
             $stmt->bindValue(2, $this->text);
             $stmt->bindValue(3,$this->picture['picture']['name']);
             move_uploaded_file($this->picture['picture']['tmp_name'],"../static/image/".$this->picture['picture']['name']);
-            if ($_SESSION["user"] != null) {
-                $stmt->bindValue(4, $this->id_user);
-            }
-            $stmt->bindValue(5, $this->created_at);
+            $stmt->bindValue(4, $this->created_at);
+            $stmt->bindValue(5, $this->id_user);
             $stmt->execute();
 
         }catch(PDOException $erreur){

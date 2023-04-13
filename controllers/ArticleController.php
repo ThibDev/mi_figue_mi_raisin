@@ -1,12 +1,11 @@
 <?php
 namespace App\controllers;
 use App\models\Article;
-use App\models\User;
 
 class ArticleController{
 
     public static function Create($post, $files){
-       $article = new Article($post["title"], $post["text"], $files, $post["id_user"], $post["created_at"]);
+       $article = new Article($post["title"], $post["text"], $files, $post["created_at"], $post["id_user"]);
        $article->Add();
         self::ReadAll();
     }
@@ -22,7 +21,7 @@ class ArticleController{
     }
 
     public static function Update($post){
-       $article =  new Article($post["title"], $post["text"], $post["picture"], $post["id_user"], $post["created_at"]);
+       $article =  new Article($post["title"], $post["text"], $post["picture"], $post["created_at"], $post["id_user"]);
        $article->Edit($post["id_article"]);
         self::ReadAll();
     }

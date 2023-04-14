@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php session_start(); ?>
     <h1>Profil de <?=$user["name"]?></h1>
     <a href="../controllers/Router.php?user=logout">Déconnexion</a>
     <a href="../controllers/Router.php?user=readAll">Voir tous les utilisateurs</a>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<?php session_start(); ?>
     <table class="table table-dark">
         <thead>
             <tr>

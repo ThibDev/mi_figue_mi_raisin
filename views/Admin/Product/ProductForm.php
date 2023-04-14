@@ -20,7 +20,7 @@
     ?>
 
     <body style="background-color: #e5e6e8;">
-
+    <?php session_start(); ?>
         <form enctype="multipart/form-data" action="../../../controllers/Router.php?product=create" method="post" style="width: 50%;background-color: white; margin: 50px auto;border-radius: 15px;padding: 10px;">
             <h1 style="font-family: sans-serif; text-align:center; padding-bottom : 15px">Ajout de produit</h1>
 

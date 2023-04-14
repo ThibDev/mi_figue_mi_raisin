@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
+<?php session_start(); ?>
 <body>
     <form action="../controllers/Router.php?user=update" method="post" style="width: 50%; margin: auto; padding-top: 100px;">
         <input type="hidden" name="id_user" id="id_user" value="<?= $user["id_user"]; ?>">
